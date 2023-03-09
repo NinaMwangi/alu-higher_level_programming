@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 
-
 def best_score(a_dictionary):
     best_key = None
     best_value = None
