@@ -5,7 +5,9 @@
 
 
 class Rectangle:
-    '''Instantiating the class'''
+    '''Instantiating the class
+    print_symbol: the symbol for string representation
+    '''
 
     number_of_instances = 0
     print_symbol = '#'
