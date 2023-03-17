@@ -13,7 +13,7 @@ class Rectangle:
         '''Constructor'''
         self.width = width
         self.height = height
-        Rectangle.number_of_instances = += 1
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         '''Destructor'''
