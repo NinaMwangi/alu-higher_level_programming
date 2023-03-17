@@ -65,9 +65,9 @@ class Rectangle:
         return ((self.__height * 2) + (self.__width * 2))
 
     def __str__(self):
+        '''Rectangle like a string'''
         w, h = self.__width, self.__height
         s = self.print_symbol
-
         return '{}{}'.format((str(s) * w + '\n') * (h - 1), str(s) * w)
 
     def __repr__(self):
