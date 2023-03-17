@@ -65,7 +65,7 @@ class Rectangle:
         return (w * 2) + (h * 2)
 
     @staticmethod
-    def def bigger_or_equal(rect_1, rect_2):
+    def bigger_or_equal(rect_1, rect_2):
         '''comparing two rectangles'''
         if type(rect_1) is not Rectangle:
             raise TypeError('rect_1 must be an instance of Rectangle')
