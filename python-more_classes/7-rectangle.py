@@ -66,8 +66,7 @@ class Rectangle:
 
     def __str__(self):
         w, h = self.__width, self.__height
-        if w == 0 or h == 0:
-            return ''
+        s = self.print_symbol
 
         return '{}{}'.format((str(s) * w + '\n') * (h - 1), str(s) * w)
 
