@@ -69,7 +69,7 @@ class Rectangle:
         if w == 0 or h == 0:
             return ''
 
-        return '{}{}'.format(('#' * w + '\n') * (h - 1), '#' * w)
+        return '{}{}'.format((str(s) * w + '\n') * (h - 1), str(s) * w)
 
     def __repr__(self):
         w, h = self.__width, self.__height
