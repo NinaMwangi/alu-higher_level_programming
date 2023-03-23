@@ -15,9 +15,9 @@ class Student:
         if attrs is None:
             return self.__dict__
 
-    attrs_dict = {}
-    for att in self.__dict__:
-        if att in attrs:
-            attrs_dict[att] = self.__dict__[att]
+        attrs_dict = {}
+        for att in self.__dict__:
+            if att in attrs:
+                attrs_dict[att] = self.__dict__[att]
 
-    return attrs_dict
+        return attrs_dict
