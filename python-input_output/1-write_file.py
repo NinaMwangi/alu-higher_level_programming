@@ -4,5 +4,5 @@
 
 def write_file(filename="", text=""):
     '''Writes a string to text file & returns number of characters'''
-    with open(filename) as f:
-        return len(f.readline())
+    with open(filename, 'w') as f:
+        return f.write(text)
