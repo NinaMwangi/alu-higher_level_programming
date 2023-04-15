@@ -14,7 +14,7 @@ The function returns the addition of its two arguments using the + operator.
 Importing the function from the module:
 	>>> add_integer = __import__("0-add_integer").add_integer
 
-Normal integer addition
+Regular addition
 	>>> add_integer(4, 4)
 	8
 
@@ -54,14 +54,24 @@ If both arguments are non-integers or non-floats, a TypeError message is raised 
         Traceback (most recent call last):
         TypeError: a must be an integer
 
-The function fails if infinity is provided.
+Float overflow
 
-	>>>add_integer(float('inf'))
+	>>>add_integer(2, float('inf'))
         Traceback (most recent call last):
         OverflowError: cannot convert float infinity to integer
 
-A ValueError is raised with NaN numbers
+Passed NaN
 
 	>>>add_integer(float('nan'))
         Traceback (most recent call last):
         valueError: cannot convert float NaN to integer
+
+One argument:
+	 >>> add_integer(1)
+	 99
+
+Non arguments:
+	 >>> add_integer()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: add_integer() missing 1 required positional argument: 'a'
