@@ -25,6 +25,7 @@ Positive and negative integers
 Addition of floating point numbers
 	>>>add_integer(4.0, 5.0)
 	9
+
 The floats are casted to integers before addition.
 
 Addtion of floating and non-floating point numbers.
