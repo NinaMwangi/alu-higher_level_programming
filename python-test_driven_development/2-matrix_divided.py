@@ -4,13 +4,15 @@
 
 def matrix_divided(matrix, div):
     '''Divides all elements of a matrix'''
+
+    TypeM = 'matrix must be a matrix (list of lists) of integers/floats'
     if type(matrix) != list:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(TypeM)
 
     row_size = None
     for row in matrix:
         if type(row) is not list:
-            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            raise TypeError(TypeM)
 
         if row_size is None:
             row_size = len(row)
@@ -19,7 +21,7 @@ def matrix_divided(matrix, div):
 
         status = all(type(element) in set([int, float]) for element in row)
         if status is False:
-            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            raise TypeError(TypeM)
 
     if type(div) not in [int, float]:
         raise TypeError('div must be a number')
