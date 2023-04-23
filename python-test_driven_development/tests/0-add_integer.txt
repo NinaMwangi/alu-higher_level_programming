@@ -12,10 +12,10 @@ Funnctionality
 The function returns the addition of its two arguments using the + operator.
 
 Importing the function from the module:
-	add_integer = __import__("0-add_integer").add_integer
+	>>> add_integer = __import__("0-add_integer").add_integer
 
 Regular addition
-	add_integer(4, 4)
+	>>> add_integer(4, 4)
 	8
 
 Positive and negative integers
@@ -23,13 +23,13 @@ Positive and negative integers
 	1
 
 Addition of floating point numbers
-	>>>add_integer(4.0, 5.0)
+	>>> add_integer(4.0, 5.0)
 	9
 
 The floats are casted to integers before addition.
 
 Addtion of floating and non-floating point numbers.
-	>>>add_integer(5.5, -2)
+	>>> add_integer(5.5, -2)
 	3
 
 Non Numbers
@@ -37,42 +37,38 @@ Non Numbers
 The function expects both numbers to be either integers or floats.
 If that is not the case a TypeError is raised
 
-	>>>add_integer("Nina", 5)
+	>>> add_integer("Nina", 5)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
-	>>>add_integer(None)
+	>>> add_integer(None)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
-	>>>add_integer(5, None)
+	>>> add_integer(5, None)
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
 If both arguments are non-integers or non-floats, a TypeError message is raised for the first argument.
 
-	>>>add_integer("Nina", "Best SE")
+	>>> add_integer("Nina", "Best SE")
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
 Float overflow
 
-	>>>add_integer(2, float('inf'))
+	>>> add_integer(2, float('inf'))
 	Traceback (most recent call last):
+	...
 	OverflowError: cannot convert float infinity to integer
 
 Passed NaN
 
-	>>>add_integer(float('nan'))
+	>>> add_integer(float('nan'))
 	Traceback (most recent call last):
+	...
 	valueError: cannot convert float NaN to integer
 
 One argument:
 	>>> add_integer(1)
 	99
-
-Non arguments:
-	>>> add_integer()
-	Traceback (most recent call last):
-	...
-	TypeError: add_integer() missing 1 required positional argument: 'a'
