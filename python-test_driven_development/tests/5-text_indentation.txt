@@ -1,0 +1,31 @@
+import module
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic test
+	>>> text_indentation("Nice. Anything else? The options are: Juice, Wine")
+	Nice.
+	<BLANKLINE>
+	Anything else?
+	<BLANKLINE>
+	The options are:
+	<BLANKLINE>
+	Juice, Wine
+
+No argument
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Non string argument
+	>>> text_indentation(5) 
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+argument includes these characters .?:
+	>>> text_indentation(".?:")
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
