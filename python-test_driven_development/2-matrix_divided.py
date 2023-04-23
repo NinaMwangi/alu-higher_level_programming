@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''A division matrix'''
+'''This module takes in a division matrix'''
 
 
 def matrix_divided(matrix, div):
@@ -29,5 +29,5 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
 
-    new = map(lambda x; list(map(lambda y: round(y / div, 2), x)), matrix)
+    new = map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix)
     return list(new)
