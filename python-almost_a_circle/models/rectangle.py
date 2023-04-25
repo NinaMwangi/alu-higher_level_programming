@@ -8,8 +8,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor for the Rectangle class"""
-        super().__innit__(id)
 
+        if id is None:
+            id = super().nb_objects + 1
+        super().__innit__(id)
         self.width = width
         self.height = height
         self.x = x
