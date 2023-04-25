@@ -34,7 +34,7 @@ class Rectangle(Base):
         """Getting the value"""
         return self.__height
        
-    @width.setter
+    @height.setter
     def height(self, value):
         """Setting the value"""
         if type(value) != int:
@@ -48,7 +48,7 @@ class Rectangle(Base):
         """Getting the value"""
         return self.__x
 
-    @width.setter
+    @x.setter
     def x(self, value):
         """Setting the value"""
         if type(value) != int:
@@ -62,7 +62,7 @@ class Rectangle(Base):
         """Getting the value"""
         return self.__y
 
-    @width.setter
+    @y.setter
     def y(self, value):
         """Setting the value"""
         if type(value) != int:
