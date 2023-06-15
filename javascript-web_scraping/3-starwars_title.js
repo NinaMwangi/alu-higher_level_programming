@@ -8,5 +8,5 @@ req.get(url, function (err, res, body) {
     return;
   }
   const movie = JSON.parse(body);
-    console.log(`${movie.title}`);
+  console.log(`${movie.title}`);
 });
