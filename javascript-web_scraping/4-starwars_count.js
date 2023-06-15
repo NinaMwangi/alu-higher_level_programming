@@ -6,11 +6,11 @@ let xFilms = 0;
 request(process.argv[2], function (err, res, body) {
   if (err == null) {
     const resp = JSON.parse(body);
-    const result = resp.result;
-    for (let i = 0; i < result.length; i++) {
-      const char = result[i].char;
-      for (let j = 0; j < char.length; j++) {
-        if (char[j].search('18') > 0) {
+    const results = resp.results;
+    for (let i = 0; i < results.length; i++) {
+      const characters = results[i].char;
+      for (let j = 0; j < characters.length; j++) {
+        if (characters[j].search('18') > 0) {
           xFilms++;
         }
       }
